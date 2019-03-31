@@ -29,6 +29,11 @@ body {
     margin: 0;
 }
 
+.body-header-nav a {
+    text-decoration: none;
+    color: white;
+}
+
 .search-box {
     background-color: white;
     float: right;
