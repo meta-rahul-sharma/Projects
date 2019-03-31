@@ -182,3 +182,18 @@ body {
     font-weight: bold;
 }
 
+.custom-header-2 {
+    display: block;
+    font-size: 2.5em;
+    margin : 0.67em 0em 0em 0em;
+    font-weight: bold;
+}
+
+.margin-20 {
+    margin: 20px 0px;
+}
+
+.font-large {
+    font-size: 120%;
+}
+
