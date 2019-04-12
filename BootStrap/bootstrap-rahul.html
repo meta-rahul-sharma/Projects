@@ -7,6 +7,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="offcanvas.css">
     </head>
     <body>
         <header class="container-fluid bg-dark">
@@ -31,47 +32,50 @@
             </nav>
         </header>
         <main class="container" role="main">
-            <div class="row">
-                <section class="col-md-9 col-sm-10">
+            <div class="row row-right">
+                <section class="col-lg-9 col-sm-12">
+                    <p class="float-right d-lg-none">
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="sidebar">Toggle nav</button>
+                    </p>
                     <div class="jumbotron">
                         <h1 class="display-4">Hello, world!</h1>
                         <p class="lead">This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <h2>Heading</h2>
                             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                             <p><a class="btn btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <h2>Heading</h2>
                             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                             <p><a class="btn btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <h2>Heading</h2>
                             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                             <p><a class="btn btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
                         </div>
     
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <h2>Heading</h2>
                             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                             <p><a class="btn btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <h2>Heading</h2>
                             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                             <p><a class="btn btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-xl-4 col-sm-6">
                             <h2>Heading</h2>
                             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                             <p><a class="btn btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
                         </div>
                     </div>    
                 </section>
-                <aside class="col-md-3 col-sm-2 d-sm-none d-md-block">
+                <aside class="col-md-3 col-sm-6 sidebar">
                     <ul class="list-group">
                         <li class="list-group-item active">Link</li>
                         <li class="list-group-item">Link</li>
@@ -86,10 +90,18 @@
                     </ul>
                 </aside>
             </div>
+            <hr>
         </main>
         <footer class="container">
-            <hr>
             <p>&copy; 2016 Company. Inc. </p>
         </footer>
+        <script>
+            $(document).ready(function() {
+                $('[data-toggle="sidebar"]').click(function() {
+                    $('.row').toggleClass('active')
+                });
+            });
+    
+        </script>
     </body>
 </html>

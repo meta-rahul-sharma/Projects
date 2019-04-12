@@ -1,0 +1,49 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+main {
+    padding-top: 30px;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+@media screen and (max-width: 991px) {
+    .row {
+        position: relative;
+        transition: all .25s ease-out;
+    }
+
+    .row-right {
+        right: 0;
+    }
+
+    .row-left {
+        left: 0;
+    }
+
+    .row-right .sidebar {
+        right: -50%;
+    }
+
+    .row-left .sidebar {
+        left: -50%;
+    }
+
+    .row-right.active {
+        right: 50%;
+    }
+
+    .row-left.active {
+        left: 50%;
+    }
+
+    .sidebar {
+        position: absolute;
+        top: 0;
+        width: 50%;
+    }
+}
