@@ -21,24 +21,12 @@ footer {
         right: 0;
     }
 
-    .row-left {
-        left: 0;
-    }
-
     .row-right .sidebar {
-        right: -50%;
-    }
-
-    .row-left .sidebar {
-        left: -50%;
+        right: -70%;
     }
 
     .row-right.active {
-        right: 50%;
-    }
-
-    .row-left.active {
-        left: 50%;
+        right: 60%;
     }
 
     .sidebar {
